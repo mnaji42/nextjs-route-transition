@@ -3,6 +3,8 @@
 import { Container } from "../../components/container"
 import { PageWrapper } from "../../components/page-wrapper"
 
+import { motion } from "framer-motion"
+
 export default function Home() {
   return (
     <PageWrapper className="overflow-hidden">
@@ -22,17 +24,26 @@ export default function Home() {
           </div>
         </div>
         <div className="flex h-screenHeightWithoutHeader [&_img]:mr-4">
-          <img
+          <motion.img
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0, transition: { delay: 0.3 } }}
+            exit={{ opacity: 0, x: 20 }}
             className="h-full w-full object-cover"
             src="/chair.jpg"
             alt="Nice chair"
           />
-          <img
+          <motion.img
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0, transition: { delay: 0.3 } }}
+            exit={{ opacity: 0, x: 20 }}
             className="h-full w-full object-cover"
             src="/chair.jpg"
             alt="Nice chair"
           />
-          <img
+          <motion.img
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0, transition: { delay: 0.3 } }}
+            exit={{ opacity: 0, x: 20 }}
             className="h-full w-full object-cover"
             src="/chair.jpg"
             alt="Nice chair"
