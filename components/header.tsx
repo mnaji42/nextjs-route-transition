@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Container } from "./container"
 import { CartIcon } from "./icons/cart"
 import { usePathname } from "next/navigation"
+import { motion } from "framer-motion"
 
 const links = [
   { href: "/products", label: "Products" },
@@ -28,7 +29,10 @@ export const Header = () => {
               <li key={link.href}>
                 <Link className="relative" href={link.href}>
                   {link.href === path && (
-                    <span className="absolute left-0 top-full block h-[1px] w-full bg-black" />
+                    <motion.span
+                      layoutId="underline"
+                      className="absolute left-0 top-full block h-[1px] w-full bg-black"
+                    />
                   )}
                   {link.label}
                 </Link>
